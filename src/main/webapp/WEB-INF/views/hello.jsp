@@ -9,4 +9,5 @@
 <body>
 Welcome to my ${serverName}
 </body>
+<script src="/js/hello.js"></script>
 </html>
