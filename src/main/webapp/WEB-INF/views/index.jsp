@@ -17,9 +17,10 @@
     </style>
 </head>
 <body>
-<form>
-    <input type='file' onchange="readURL(this);" />
+<form action="${pageContext.request.contextPath}/images" method="post" enctype="multipart/form-data">
+    <input type='file' onchange="readURL(this);" name="files" />
     <img id="blah" src="http://placehold.it/180" alt="your image" />
+    <input type="submit" value="전">
 </form>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

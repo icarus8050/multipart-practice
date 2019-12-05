@@ -18,8 +18,9 @@ class ImageServiceTest {
     @Autowired
     ImageService imageService;
 
-    @Test
+    /*@Test
     @DisplayName("이미지 경로 추가 테스트")
+    @Deprecated
     void simpleImagePathSaveTest() {
         //given
         String imagePath = "/abcd/efg/test.jpg";
@@ -30,5 +31,5 @@ class ImageServiceTest {
         //then
         assertNotNull(idx);
         log.info(idx.toString());
-    }
+    }*/
 }
