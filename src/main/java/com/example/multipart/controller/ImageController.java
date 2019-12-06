@@ -30,7 +30,7 @@ public class ImageController {
         List<MultipartFile> files = mtfRequest.getFiles("files");
         imageService.imageSave(files);
 
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     @NoArgsConstructor

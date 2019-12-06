@@ -18,7 +18,7 @@
 </head>
 <body>
 <form action="${pageContext.request.contextPath}/images" method="post" enctype="multipart/form-data">
-    <input type='file' onchange="readURL(this);" name="files" />
+    <input type='file' multiple="multiple" onchange="readURL(this);" name="files" />
     <img id="blah" src="http://placehold.it/180" alt="your image" />
     <input type="submit" value="전">
 </form>

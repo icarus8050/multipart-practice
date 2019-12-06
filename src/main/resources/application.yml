@@ -3,11 +3,14 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 1234
-    url: jdbc:mysql://localhost:3306/staby
+    url: jdbc:mysql://localhost:3306/staby?
   mvc:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
+  servlet:
+    multipart:
+      max-file-size: -1
 
 logging:
   level:
