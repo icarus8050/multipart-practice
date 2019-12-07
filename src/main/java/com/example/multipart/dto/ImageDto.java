@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ImageDto {
     private Long idx;
-    private String path;
+    private String image_path;
 }

@@ -19,7 +19,13 @@ import java.util.List;
 public class ImageService {
 
     private final ImageMapper imageMapper;
-    private final String IMAGE_BASE_PATH = "src/main/webapp/WEB-INF/uploadFiles/";
+    private final String IMAGE_BASE_PATH = "src/main/resource/uploadFiles/";
+
+    @Transactional(readOnly = true)
+    public List<ImageDto> findAll() {
+        return imageMapper.findAll();
+    }
+
 
     @Transactional
     public void imageSave(List<MultipartFile> files) throws IOException {
@@ -35,7 +41,7 @@ public class ImageService {
                 file.transferTo(path.resolve(System.currentTimeMillis() + "-" + fileName));
 
                 ImageDto dto = new ImageDto();
-                dto.setPath(filePath);
+                dto.setImage_path(filePath);
                 imageMapper.save(dto);
 
             } catch (Exception e) {
